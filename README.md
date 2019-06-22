@@ -7,6 +7,7 @@ zhudb
 一个 mysql, sqlite 数据库工具 for python
 
 ![](https://img.shields.io/badge/language-python3-orange.svg)
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 - - -
