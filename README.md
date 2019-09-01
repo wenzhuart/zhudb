@@ -3,7 +3,9 @@
 zhudb
 ====================
 
-一个 mysql, sqlite 数据库工具 for python
+一个 mysql, sqlite 数据库工具 for python3+
+
+(注: 不支持 python2)
 
 ![](https://img.shields.io/badge/language-python3-orange.svg)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
@@ -11,10 +13,9 @@ zhudb
 
 - - -
 
-依赖
+安装
 ====================
-* sqlite3
-* pymysql
+	pip3 install zhudb
 
 
 使用
