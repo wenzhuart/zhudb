@@ -1,5 +1,4 @@
 
-![Alt text](https://img3.doubanio.com/icon/u3430532-14.jpg)
 
 zhudb
 ====================
