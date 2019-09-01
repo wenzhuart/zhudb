@@ -1,0 +1,13 @@
+
+.DS_Store
+*.py[doc]
+*.pyc
+*.so
+*.egg
+*.egg-info
+*.log
+dist
+build
+.env/
+__pycache__/
+Icon*
