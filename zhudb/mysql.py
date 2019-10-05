@@ -18,16 +18,22 @@ class ZhuMysql(ZhuDb):
         database="skl"
     )
     """
-    def __init__(self, host, database, user, passwd=None):
+    def __init__(self, host, database, user, passwd=None, port=3308, **kwarg):
         self._last_use_time = time.time()  # timestamp
+        if not isinstance(port, int):
+            port = int(port)
         self._arguments = dict(
             host=host,
+            port=port,
             user=user,
             passwd=passwd,
             database=database,
             charset="utf8",
             cursorclass=pymysql.cursors.DictCursor
         )
+        if kwarg:
+            for key in kwarg:
+                self._arguments.update({key: kwarg[key]})
         self.dbname = database
         try:
             self._get_conn()
@@ -97,7 +103,3 @@ class ZhuMysql(ZhuDb):
             self._print_error(err)
         finally:
             cur.close()
-
-
-
-
