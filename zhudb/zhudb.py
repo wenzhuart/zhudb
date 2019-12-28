@@ -64,7 +64,7 @@ class ZhuDb(object):
 
     def __del__(self):
         self.close_all()
-        logger.info('zhusqlite: closed all')
+        logger.debug('zhudb: closed all')
 
     def _get_conn(self, path=None):
         path = self.dbname
@@ -89,10 +89,10 @@ class ZhuDb(object):
 
     def close_all(self, conn=None, cur=None):
         if getattr(self, 'cur', None) is not None:
-            logger.info('zhudb: closing cur')
+            logger.debug('zhudb: closing cur')
             self.cur.close()
         if getattr(self, 'conn', None) is not None:
-            logger.info('zhudb: closing connection')
+            logger.debug('zhudb: closing connection')
             self.conn.close()
 
     def get_columns(self, tablename):
