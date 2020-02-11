@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='zhudb',
-    version='0.1.4',
+    version='0.1.5',
     author='bamboo',
     author_email='wenzhu_art@hotmail.com',
     url='https://github.com/wenzhuart/zhudb',
