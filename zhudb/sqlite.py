@@ -75,6 +75,11 @@ class ZhuSqlite(ZhuDb):
             argKeys=argKeys,
             qms=qmarks)
         values = [kwargs[k] for k in kwargs]
-        self.conn.execute(clause, values)
+        cur = self._get_cursor()
+        cur.execute(clause, values)
+        lastid = cur.lastrowid
         self.conn.commit()
+        return lastid 
+        
+        
 

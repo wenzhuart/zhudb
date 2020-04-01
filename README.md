@@ -94,6 +94,8 @@ zhudb
 	}
 	db.insert("test_table", **new_line)
 
+返回 最后插入行的 id
+
 ##### 增加一行, 并检查重复
 
 	new_line = {
