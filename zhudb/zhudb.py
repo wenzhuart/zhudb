@@ -241,7 +241,7 @@ class ZhuDb(object):
         kvlist = []
         for key in keydict:
             val = keydict[key]
-            kvlist.append("{k}='{v}'".format(k=key, v=val))
+            kvlist.append("'{k}'='{v}'".format(k=key, v=val))
         if len(kvlist) > 1:
             kvstr = ' AND '.join(kvlist)
         else:
@@ -275,6 +275,8 @@ class ZhuDb(object):
                 logger.error('unicode error in _qt: {}'.format(err))
                 raise
         elif isinstance(x, int):
+            return x
+        elif isinstance(x, float):
             return x
         elif isinstance(x, datetime.date):
             return "('{}')".format(x)
